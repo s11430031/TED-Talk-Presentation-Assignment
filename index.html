@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI is a Next-Token Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Slide Dots Controller -->
+    <div class="slide-dots" id="slideDots"></div>
+    <div class="keyboard-hint">
+        <span class="key-btn">▲</span>
+        <span class="key-btn">▼</span>
+        <span>NAVIGATE</span>
+    </div>
+
+    <!-- PAGE 01 -->
+    <div class="slide" id="slide-0">
+        <div class="bg-grid"></div>
+        <div class="slide-header">PAGE 01</div>
+        <div class="title-badge">PREDICTOR STUDY</div>
+        <h1>AI IS NOT THINKING</h1>
+        <p style="font-size: 1.8rem; color: var(--text-muted); margin-bottom: 40px; font-weight: 400; letter-spacing: -0.01em; z-index: 1;">
+            It is not an active brain, but a highly sophisticated <span style="font-weight: 700; color: #000; border-bottom: 2px solid #000;">"next-token predictor."</span>
+        </p>
+        <!-- Adding Class and Name securely and elegantly -->
+        <p style="font-size: 1.25rem; font-weight: 700; letter-spacing: 0.05em; color: #000; z-index: 1; margin-bottom: 8px;">Class 101 &nbsp;•&nbsp; 陳勤閔</p>
+        <p style="font-size: 0.85rem; letter-spacing: 0.25em; color: var(--text-light); font-family: var(--mono); z-index: 1; text-transform: uppercase;">TED TALK ENGLISH SERIES</p>
+        
+        <div class="bottom-scroll-prompt" onclick="scrollToSlide(1)">
+            <span>SCROLL</span>
+            <svg class="arrow-down-icon" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+    </div>
+
+    <!-- PAGE 02: Simplified Content & Live Probability Adaptive Map -->
+    <div class="slide" id="slide-1">
+        <div class="slide-header">PAGE 02</div>
+        <h2>THE ILLUSION OF CONVERSATION</h2>
+        <h3 style="margin-bottom: 15px;">Behind the Dialogue: The Wall of Probability</h3>
+        <p style="font-size: 1.45rem; max-width: 800px; color: var(--text-muted); font-weight: 300; line-height: 1.6; text-align: center;">
+            AI doesn't grasp meaning; it maps relationships. When we chat, <br>it simply traces mathematical pathways to choose the next most probable word sequence.
+        </p>
+        
+        <!-- Highly Robust Web Map Visualizer -->
+        <div class="tree-container" id="treeContainer">
+            <svg class="tree-svg-canvas" id="treeCanvas">
+                <!-- SVG lines will be rendered dynamically to match node positions perfectly -->
+            </svg>
+
+            <!-- Column 1 -->
+            <div class="tree-column">
+                <div class="tree-node active-node start" id="node-0">"Our AI..."</div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="tree-column">
+                <div class="tree-node active-node" id="node-1a">"is not" (84%)</div>
+                <div class="tree-node" id="node-1b">"has" (12%)</div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="tree-column">
+                <div class="tree-node active-node" id="node-2a">"human." (74%)</div>
+                <div class="tree-node" id="node-2b">"awake." (18%)</div>
+                <div class="tree-node" id="node-2c">"data." (81%)</div>
+                <div class="tree-node" id="node-2d">"code." (11%)</div>
+            </div>
+        </div>
+
+        <div class="bottom-scroll-prompt" onclick="scrollToSlide(2)">
+            <span>INTERACTIVE PIPELINE</span>
+            <svg class="arrow-down-icon" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+    </div>
+
+    <!-- PAGE 03 (Interactive Pipeline) -->
+    <div class="slide" id="slide-2">
+        <div class="slide-header">PAGE 03</div>
+        <h2>STEP 1: Breaking Down Language</h2>
+        <h3>Everything is a "Token" & Mathematical Vector</h3>
+        
+        <div class="token-interactive-container">
+            <div class="token-input-wrapper">
+                <input type="text" id="demoInput" value="Artificial Intelligence" placeholder="Type any sentence to tokenize...">
+                <button onclick="processTokens()">Analyze ➔</button>
+            </div>
+
+            <div class="pipeline">
+                <div class="pipe-node" id="node-1">
+                    <div class="pipe-label">1. Human Input</div>
+                    <div class="pipe-val" id="text-input-val">"Artificial Intelligence"</div>
+                </div>
+                <div class="pipe-arrow">➔</div>
+                <div class="pipe-node" id="node-2">
+                    <div class="pipe-label">2. Tokenization</div>
+                    <div class="pipe-val" id="text-token-val">
+                        <div class="pipe-val-tokens">
+                            <span class="token-chip">Artific</span>
+                            <span class="token-chip">ial</span>
+                            <span class="token-chip">_Intel</span>
+                            <span class="token-chip">ligence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pipe-arrow">➔</div>
+                <div class="pipe-node" id="node-3">
+                    <div class="pipe-label">3. Embeddings Mapping</div>
+                    <div class="pipe-val" id="text-vector-val" style="font-family: var(--mono); font-size: 0.9rem;">[3421, 891, 1054, 882]</div>
+                </div>
+                <div class="pipe-arrow">➔</div>
+                <div class="pipe-node" id="node-4" style="background: #000000; color: #ffffff;">
+                    <div class="pipe-label" style="color: var(--text-light);">4. Neural Weights</div>
+                    <div class="pipe-val" style="font-family: var(--mono); font-size: 0.85rem;">175B+ Parameters Matrix</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 04 (Interactive Chart Predictor - Taiwanese School Humor in English) -->
+    <div class="slide" id="slide-3">
+        <div class="slide-header">PAGE 04</div>
+        <h2>STEP 2: Predict the Next Token</h2>
+        <h3>Interactive Next-Token Probability Distribution</h3>
+        
+        <div class="predictor-container">
+            <div class="prompt-selector">
+                <p style="text-align: left; font-size: 0.9rem; font-family: var(--mono); margin-bottom: 5px; color: var(--text-light);">Select a School Life Scenario:</p>
+                <button class="prompt-btn active" onclick="switchPrompt('exam', this)">
+                    "When a student has no idea how to answer a multiple-choice question on an exam, they guess..."
+                </button>
+                <button class="prompt-btn" onclick="switchPrompt('scholar', this)">
+                    "Who is the legendary historical scholar that napping students 'visit' most during class?"
+                </button>
+                <button class="prompt-btn" onclick="switchPrompt('lie', this)">
+                    "Right after midterms, what is the most untrustworthy lie classmates tell each other?"
+                </button>
+            </div>
+
+            <div class="chart-container" id="chartContainer">
+                <!-- Dynamically Generated Bar Rows -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 05 (Cleaned Table: Completely removed the "Hallucinating" tag) -->
+    <div class="slide" id="slide-4">
+        <div class="slide-header">PAGE 05</div>
+        <h2>THE ILLUSION VS. THE REALITY</h2>
+        <h3>The Gap Between Brain and Machine</h3>
+        
+        <table class="minimal-table">
+            <thead>
+                <tr>
+                    <th>What it looks like (Illusion)</th>
+                    <th>What is actually happening (Reality)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Understanding Context</td>
+                    <td>Calculating mathematical weights across a high-dimensional context window using attention mechanisms.</td>
+                </tr>
+                <tr>
+                    <td>Creative Writing</td>
+                    <td>Stochastically sampling tokens from a probability distribution based on a temperature parameter.</td>
+                </tr>
+                <tr>
+                    <td>Possessing Knowledge</td>
+                    <td>It possesses no conceptual model of reality; it only holds statistical associations between token sequences.</td>
+                </tr>
+                <tr>
+                    <td>Lying & Falsehoods</td>
+                    <td>It cannot lie because it does not know the truth. It merely predicts a highly probable token that is factually incorrect.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PAGE 06 (Elegant clean typography weights instead of heavy blocks) -->
+    <div class="slide" id="slide-5">
+        <div class="slide-header">PAGE 06</div>
+        <h2>THE PRESENTATION TAKEAWAY</h2>
+        <blockquote>
+            AI does not generate <span class="highlight-quote">ideas</span> or <span class="highlight-quote">intentionality</span>;<br>
+            it merely predicts the next most likely sequence of human text.
+        </blockquote>
+        <div class="divider"></div>
+        <div class="final-cta">
+            Master the <span class="strong-cta">Tool</span>. <br>
+            Do not outsource your <span class="strong-cta">Mind</span>.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
